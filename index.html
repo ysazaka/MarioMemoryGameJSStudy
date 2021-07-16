@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mario Memory Game</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script src="./src/util.js"></script>
+    <script src="./src/memoryGame.js"></script>
+    <script src="./src/screen.js"></script>
+    <script src="./index.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div id="content" class="row mt-5"></div>
+
+      <br />
+      <div class="row container-fluid justify-content-md-center">
+        <button type="button" class="btn btn-success" id="btnPlay">
+          Embaralhar as cartas
+        </button>
+        <button type="button" class="btn btn-danger offset-sm-1" id="btnShowAllCards">
+          Mostrar Tudo
+        </button>
+      </div>
+
+      <div id="loading" class="row container-fluid invisible my-4 justify-content-md-center">
+        <strong id="counter">Começando em 3...</strong>
+        <div
+          class="spinner-border text-warning spinner-border-sm mx-2"
+          role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+
+      <div class="row container-fluid justify-content-md-center">
+        <div id="message" class="alert alert-success invisible" role="alert">
+          Combinação certa!!
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
